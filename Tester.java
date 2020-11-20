@@ -29,5 +29,27 @@ public class Tester{
     System.out.println(b.subtract(a));
     System.out.println(e.subtract(f));
     System.out.println(c.subtract(e));
+
+    System.out.println();
+
+    RationalNumber a1 = new RationalNumber(1, 2);
+    RationalNumber b1 = new RationalNumber(-1, 2);
+    RationalNumber c1 = new RationalNumber(1, -5);
+    RationalNumber d1 = new RationalNumber(1, 0);
+    RationalNumber e1 = new RationalNumber(-2, -5);
+    System.out.println(a1.getNumerator());
+    System.out.println(a1.getDenominator());
+
+    System.out.println(b1.getNumerator());
+    System.out.println(b1.getDenominator());
+
+    System.out.println(c1.getNumerator());
+    System.out.println(c1.getDenominator());
+
+    System.out.println(d1.getNumerator());
+    System.out.println(d1.getDenominator());
+
+    System.out.println(e1.getNumerator());
+    System.out.println(e1.getDenominator());
   }
 }
