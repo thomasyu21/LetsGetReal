@@ -63,5 +63,13 @@ public class Tester{
 
     System.out.println(h1.getNumerator());
     System.out.println(h1.getDenominator());
+
+    RationalNumber i1 = a1.reciprocal();
+    System.out.println(i1.equals(h1));
+    System.out.println(i1.equals(g1));
+
+    System.out.println(a1);
+    System.out.println(b1);
+    System.out.println(c1);
   }
 }

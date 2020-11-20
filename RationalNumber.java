@@ -36,4 +36,18 @@ public class RationalNumber extends RealNumber{
      return result;
     }
   }
+
+  public boolean equals(RationalNumber other){
+    if (this.numerator == other.numerator && this.denominator == other. denominator){
+      return true;
+    }
+    if (this.numerator == 0 && this.numerator == other.numerator){
+      return true;
+    }
+    return false;
+  }
+
+  public String toString(){
+    return numerator+"/"+denominator;
+  }
 }
