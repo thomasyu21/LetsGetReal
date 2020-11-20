@@ -51,5 +51,17 @@ public class Tester{
 
     System.out.println(e1.getNumerator());
     System.out.println(e1.getDenominator());
+
+    RationalNumber f1 = c1.reciprocal();
+    RationalNumber g1 = d1.reciprocal();
+    RationalNumber h1 = a1.reciprocal();
+    System.out.println(f1.getNumerator());
+    System.out.println(f1.getDenominator());
+
+    System.out.println(g1.getNumerator());
+    System.out.println(g1.getDenominator());
+
+    System.out.println(h1.getNumerator());
+    System.out.println(h1.getDenominator());
   }
 }
