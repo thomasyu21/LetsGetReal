@@ -37,4 +37,14 @@ public class RealNumber{
     RealNumber result = new RealNumber(this.value*other.value);
     return result;
   }
+
+  public RealNumber divide(RealNumber other){
+    RealNumber result = new RealNumber(this.value/other.value);
+    return result;
+  }
+
+  public RealNumber subtract(RealNumber other){
+    RealNumber result = new RealNumber(this.value-other.value);
+    return result;
+  }
 }

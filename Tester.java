@@ -21,5 +21,13 @@ public class Tester{
     System.out.println(d.multiply(b));
     System.out.println(a.multiply(f));
     System.out.println(c.multiply(f));
+
+    System.out.println(b.divide(a));
+    System.out.println(b.divide(f));
+    System.out.println(c.divide(f));
+
+    System.out.println(b.subtract(a));
+    System.out.println(e.subtract(f));
+    System.out.println(c.subtract(e));
   }
 }
