@@ -6,14 +6,15 @@ public class RationalNumber extends RealNumber{
     if ((deno < 0 && nume > 0) || (nume < 0 && deno < 0)){
       numerator = -nume;
       denominator = -deno;
-      reduce();
     }else if (deno == 0){
       numerator = 0;
       denominator = 1;
     }else{
     numerator = nume;
     denominator = deno;
-    reduce();
+    }
+    if (numerator != 0){
+      reduce();
     }
   }
 
@@ -70,5 +71,15 @@ public class RationalNumber extends RealNumber{
     int gcd = gcd(numerator, denominator);
     numerator = numerator/gcd;
     denominator = denominator/gcd;
+  }
+
+  public RationalNumber multiply(RationalNumber other){
+    RationalNumber result = new RationalNumber(this.numerator*other.numerator, this.denominator*other.denominator);
+    return result;
+  }
+
+  public RationalNumber divide(RationalNumber other){
+    RationalNumber result = new RationalNumber(this.numerator*other.denominator, this.denominator*other.numerator);
+    return result;
   }
 }

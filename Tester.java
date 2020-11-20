@@ -71,10 +71,16 @@ public class Tester{
     System.out.println(a1);
     System.out.println(b1);
     System.out.println(c1);
+    System.out.println(d1);
 
     RationalNumber j1 = new RationalNumber(20, -5);
     RationalNumber k1 = new RationalNumber(24, 8);
     System.out.println(j1);
     System.out.println(k1);
+
+    System.out.println(a1.multiply(b1));
+    System.out.println(a1.multiply(d1));
+    System.out.println(a1.divide(b1));
+    System.out.println(a1.divide(d1));
   }
 }
