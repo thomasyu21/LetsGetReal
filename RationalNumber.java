@@ -6,12 +6,14 @@ public class RationalNumber extends RealNumber{
     if ((deno < 0 && nume > 0) || (nume < 0 && deno < 0)){
       numerator = -nume;
       denominator = -deno;
+      reduce();
     }else if (deno == 0){
       numerator = 0;
       denominator = 1;
     }else{
     numerator = nume;
     denominator = deno;
+    reduce();
     }
   }
 
@@ -28,13 +30,8 @@ public class RationalNumber extends RealNumber{
  }
 
  public RationalNumber reciprocal(){
-   if (numerator < 0){
-     RationalNumber result = new RationalNumber(-denominator, -numerator);
-     return result;
-   }else{
-     RationalNumber result = new RationalNumber(denominator, numerator);
-     return result;
-    }
+   RationalNumber result = new RationalNumber(denominator, numerator);
+   return result;
   }
 
   public boolean equals(RationalNumber other){
@@ -49,5 +46,29 @@ public class RationalNumber extends RealNumber{
 
   public String toString(){
     return numerator+"/"+denominator;
+  }
+
+  private static int gcd(int a, int b){
+    int larger = 0;
+    int smaller = 0;
+    if (Math.abs(a) > Math.abs(b)){
+      larger = a;
+      smaller = b;
+    }else{
+      larger = b;
+      smaller = a;
+    }
+    while (larger%smaller != 0){
+      int r = larger/smaller;
+      larger = smaller;
+      smaller = r;
+    }
+    return smaller;
+  }
+
+  private void reduce(){
+    int gcd = gcd(numerator, denominator);
+    numerator = numerator/gcd;
+    denominator = denominator/gcd;
   }
 }
