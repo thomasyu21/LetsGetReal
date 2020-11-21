@@ -82,5 +82,13 @@ public class Tester{
     System.out.println(a1.multiply(d1));
     System.out.println(a1.divide(b1));
     System.out.println(a1.divide(d1));
+
+    System.out.println(a1.add(b1));
+    System.out.println(b1.add(c1));
+    System.out.println(a1.add(c1));
+
+    System.out.println(a1.subtract(b1));
+    System.out.println(a1.subtract(d1));
+    System.out.println(e1.subtract(c1));
   }
 }

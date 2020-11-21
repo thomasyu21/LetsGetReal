@@ -3,20 +3,20 @@ public class RationalNumber extends RealNumber{
 
   public RationalNumber(int nume, int deno){
     super(0.0);
-    if ((deno < 0 && nume > 0) || (nume < 0 && deno < 0)){
+    if (deno < 0){
       numerator = -nume;
       denominator = -deno;
     }else if (deno == 0){
       numerator = 0;
       denominator = 1;
-    }else{
+  }else{
     numerator = nume;
     denominator = deno;
-    }
+  }
     if (numerator != 0){
       reduce();
-    }
   }
+}
 
   public double getValue(){
     return 0.0;
@@ -53,14 +53,14 @@ public class RationalNumber extends RealNumber{
     int larger = 0;
     int smaller = 0;
     if (Math.abs(a) > Math.abs(b)){
-      larger = a;
-      smaller = b;
+      larger = Math.abs(a);
+      smaller = Math.abs(b);
     }else{
-      larger = b;
-      smaller = a;
+      larger = Math.abs(b);
+      smaller = Math.abs(a);
     }
     while (larger%smaller != 0){
-      int r = larger/smaller;
+      int r = larger%smaller;
       larger = smaller;
       smaller = r;
     }
@@ -80,6 +80,20 @@ public class RationalNumber extends RealNumber{
 
   public RationalNumber divide(RationalNumber other){
     RationalNumber result = new RationalNumber(this.numerator*other.denominator, this.denominator*other.numerator);
+    return result;
+  }
+
+  public RationalNumber add(RationalNumber other){
+    int newNumerator = (this.numerator*other.denominator)+(other.numerator*this.denominator);
+    int newDenominator = (this.denominator*other.denominator);
+    RationalNumber result = new RationalNumber(newNumerator, newDenominator);
+    return result;
+  }
+
+  public RationalNumber subtract(RationalNumber other){
+    int newNumerator = (this.numerator*other.denominator)-(other.numerator*this.denominator);
+    int newDenominator = (this.denominator*other.denominator);
+    RationalNumber result = new RationalNumber(newNumerator, newDenominator);
     return result;
   }
 }
