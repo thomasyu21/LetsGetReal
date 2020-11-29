@@ -94,10 +94,7 @@ public class Tester{
     RealNumber num = new RealNumber(3.5);
     RealNumber other = new RealNumber(3.500000001);
     RationalNumber z1 = new RationalNumber(3, 7);
-    RealNumber y1 = new RationalNumber(7, 2);
 
     System.out.println(z1.getValue());
-    System.out.println(y1.getValue());
-    System.out.println(num.equals(y1));
   }
 }
