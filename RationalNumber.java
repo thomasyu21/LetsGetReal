@@ -45,7 +45,13 @@ public class RationalNumber extends Number{
   }
 
   public String toString(){
-    return numerator+"/"+denominator;
+    if (numerator == 0){
+      return "0";
+    }else if (denominator == 1){
+      return ""+numerator;
+    }else{
+      return numerator+"/"+denominator;
+    }
   }
 
   private static int gcd(int a, int b){
