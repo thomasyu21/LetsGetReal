@@ -32,6 +32,12 @@ public class Tester{
 
     System.out.println();
 
+    System.out.println(a.compareTo(b));
+    System.out.println(a.compareTo(d));
+    System.out.println(d.compareTo(e));
+
+    System.out.println();
+
     RationalNumber a1 = new RationalNumber(1, 2);
     RationalNumber b1 = new RationalNumber(-1, 2);
     RationalNumber c1 = new RationalNumber(1, -5);
