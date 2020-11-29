@@ -20,7 +20,7 @@ public abstract class Number{
       }
     }
     double difference = Math.abs(((this.getValue()-other.getValue())/this.getValue()));
-    if (difference <= 0.00001) {
+    if (difference <= 0.0000001) {
       return true;
     }
     return false;
